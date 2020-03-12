@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b0416a1-8dd7-4b9f-bd23-eb9f0f88e211" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Z0lpErsCOZLNS3vC5wsRZrbWF7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ED/Dietplan_app/images" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sathya\PycharmProjects\EradicateDiabetes\ED\Dietplan_app\images" />
+      <recent name="C:\Users\sathya\PycharmProjects\EradicateDiabetes\ED\Dietplan_app" />
+      <recent name="C:\Users\sathya\PycharmProjects\EradicateDiabetes\ED\Dietplan_app\Template" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b0416a1-8dd7-4b9f-bd23-eb9f0f88e211" name="Default Changelist" comment="" />
+      <created>1583984072850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583984072850</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="94" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583987043567">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="94" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1583987043567" />
+    <state x="420" y="137" key="FileChooserDialogImpl" timestamp="1583987154526">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="420" y="137" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1583987154526" />
+    <state x="143" y="11" key="SettingsEditor" timestamp="1583987411217">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="143" y="11" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1583987411217" />
+    <state x="347" y="14" width="585" height="732" key="find.popup" timestamp="1583991386497">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="347" y="14" width="585" height="732" key="find.popup/0.0.1280.760@0.0.1280.760" timestamp="1583991386497" />
+    <state x="232" y="41" key="scopes" timestamp="1583989388167">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="232" y="41" key="scopes/0.0.1280.760@0.0.1280.760" timestamp="1583989388167" />
+  </component>
+</project>

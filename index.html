@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sixth Sense</title>
+    <style>
+body {
+  background-color: #FCFFE8;
+   color: black;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.hidden{
+    display: none;
+ }
+</style>
+
+    <script type="text/javascript">
+        function makeRequired(id, name)
+        {
+             var radio = document.getElementById(id);
+             var hiddenInput = document.getElementsByClassName(name);
+
+             for (var i = 0; i != hiddenInput.length; i++){
+                if (radio.value == "yes") {
+                    hiddenInput[i].style.display = "block";
+                }
+                else{
+                    hiddenInput[i].style.display = "none";
+            }
+        }
+    }
+
+    /* function makeRequired(doc, evt)
+    {
+     var f = doc.getField(evt.target.name + "_long");
+     if (f == null) { // cannot get the field - something is wrong
+        return;
+     }
+
+     if (evt.target.value == "yes") {
+        f.display = display.visible;
+        f.required = true;
+    }
+    else {
+        f.display = display.hidden;
+        f.required = false;
+    }
+    }
+    */
+    </script>
+</head>
+<body>
+<p>&nbsp;</p>
+<h1 align="center"><u>Eradicate Diabetes</u></h1>
+<p>&nbsp;</p>
+
+<h4 align="center"><strong>Personal Information</strong></h4>
+<form name="form1" method="post" action="form2/">{% csrf_token %}
+<table style="height: 104px;" width="562" align="center">
+<tbody>
+<tr>
+    <td style="width: 133.6px;">First Name</td>
+<td style="width: 133.6px;"><input name="fn" type="text" value = {{ name }} required /></td>
+<td style="width: 134.4px;">&nbsp;Email</td>
+<td style="width: 134.4px;"><input id="emailid" type="email" name="email" required placeholder="Enter valid email" /></td>
+</tr>
+<tr>
+<td style="width: 133.6px;">Middle Name</td>
+<td style="width: 133.6px;"><input name="mn" type="text" /></td>
+<td style="width: 134.4px;">&nbsp;Phone</td>
+<td style="width: 134.4px;"><input name="phn" type="tel" required/></td>
+</tr>
+<tr>
+<td style="width: 133.6px;">Last Name</td>
+<td style="width: 133.6px;"><input name="ln" type="text" required/></td>
+<td style="width: 134.4px;">&nbsp;Date of birth</td>
+<td style="width: 134.4px;"><input type="date" required /></td>
+</tr>
+<tr>
+<td style="width: 133.6px;">Sex</td>
+<td style="width: 133.6px;"><input name="sex" type="radio" value="&quot;male" required />Male<input name="sex" type="radio" value="&quot;female" />Female</td>
+<td style="width: 134.4px;">Height</td>
+<td style="width: 134.4px;"><input name="height" type="number" placeholder="Cms" required /></td>
+</tr>
+<tr>
+<td style="width: 133.6px;">&nbsp;</td>
+<td style="width: 133.6px;">&nbsp;</td>
+<td style="width: 134.4px;">Weight</td>
+<td style="width: 134.4px;"><input name="height" type="number" placeholder="Kg" required /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h4 align="center"><strong>Medical Information</strong>&nbsp;</h4>
+<table style="height: 350px;" width="560" align="center">
+<tbody>
+<tr>
+<td style="width: 165.6px; text-align: left;">Have you ever been diagnosed with <strong>Diabetes</strong>?</td>
+<td style="width: 165.6px;"><input name="db" type="radio" id="dbyes" value="yes" required onclick="makeRequired(id,name);"/>Yes <input name="db" type="radio" id="dbno" value="no" onclick="makeRequired(id,name);" />No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long you have been diagnosed with <strong>Diabetes</strong>?</td>
+<td style="width: 165.6px;"><input name="db_long" type="text" placeholder="years,months" class="db" /> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>HbA1c</p>
+</td>
+<td style="width: 165.6px;"><input name="HbA1c" type="text"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Fasting </p>
+</td>
+<td style="width: 165.6px;"><input name="Fasting" type="text"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Postprandial(PP)</p>
+</td>
+<td style="width: 165.6px;"><input name="Postprandial" type="text"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Do you have a history of <strong>Diabetes</strong> in your family?</p>
+</td>
+<td style="width: 165.6px;"><input name="hist_db" type="radio" value="yes" required/>Yes <input name="hist_db" type="radio" value="no" />No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>Obesity</strong>?</p>
+</td>
+<td style="width: 165.6px;"><input name="obs" type="radio" id="obsyes" value="yes" required onclick="makeRequired(id,name);"/>Yes <input name="obs" type="radio" id="obsno" value="no" onclick="makeRequired(id,name);"/>No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long you have been diagnosed with <strong>Obesity</strong></td>
+<td style="width: 165.6px;">
+    <input name="obslong" type="text" placeholder="years,months" class="obs"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>Hypertension</strong>?</p>
+</td>
+<td style="width: 165.6px;"><input name="hypt" type="radio" id="hyptyes" value="yes" required onclick="makeRequired(id,name);"/>Yes <input name="hypt" type="radio" id="hyptno" value="no" onclick="makeRequired(id,name);"/>No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long you have been diagnosed with<strong>Hypertension</strong>?</td>
+<td style="width: 165.6px;"><input name="hypt_long" type="text" placeholder="years,months" class="hypt"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>PCOD/PCOS?</strong></p>
+</td>
+<td style="width: 165.6px;"><input name="pcod" type="radio" id="pcodyes" value="yes" required onclick="makeRequired(id,name);"/>Yes <input name="pcod" type="radio" id="pcodno" value="no" onclick="makeRequired(id,name);"/>No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long you have been diagnosed with<strong>PCOD/PCOS</strong>?</td>
+<td style="width: 165.6px;"><input name="pcod_long" type="text" placeholder="years,months" class="pcod"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>Thyroid</strong>?</p>
+</td>
+<td style="width: 165.6px;"><input name="thy" type="radio" id="thyyes" value="yes" required onclick="makeRequired(id,name);"/>Yes <input name="thy" type="radio" id="thyno" value="no" onclick="makeRequired(id,name);"/>No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long you have been diagnosed with&nbsp;<strong>Thyroid</strong>?</td>
+<td style="width: 165.6px;"><input name="thy_long" type="text" placeholder="years,months" class="thy" /> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>Heart disease?</strong></p>
+</td>
+<td style="width: 165.6px;"><input name="hrt" id="hrtyes" type="radio" value="yes" required onclick="makeRequired(id,name);"/>Yes <input name="hrt" id="hrtno" type="radio" value="no" onclick="makeRequired(id,name);" />No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long you have been diagnosed with <strong>Heart disease</strong>?</td>
+<td style="width: 165.6px;"><input name="hrt_long" type="text" placeholder="years, months" id="required_later" class="hrt"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>liver disease</strong>?</p>
+</td>
+<td style="width: 165.6px;"><input name="lvr" type="radio" id="lvryes" value="yes" required onclick="makeRequired(id,name);" />Yes <input name="lvr" type="radio" id="lvrno" value="no" onclick="makeRequired(id,name);"/>No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long have you been diagnosed with <strong>liver disease</strong>?</td>
+<td style="width: 165.6px;"><input name="lvr_long" type="text" placeholder="years,months" class="lvr"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Have you ever been diagnosed with <strong>kidney disease</strong>?</p>
+</td>
+<td style="width: 165.6px;"><input name="lvr" type="radio" id="lvryes" value="yes" required onclick="makeRequired(id,name);" />Yes <input name="lvr" type="radio" id="lvrno" value="no" onclick="makeRequired(id,name);"/>No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">If Yes, how long have you been diagnosed with <strong>kidney disease</strong>?</td>
+<td style="width: 165.6px;"><input name="lvr_long" type="text" placeholder="years,months" class="lvr"/> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Current medication?</p>
+</td>
+<td style="width: 165.6px;"><input name="curnt_med" type="radio" value="yes" />Yes <input name=" curnt_med" type="radio" value="no" />No</td>
+</tr>
+<tr>
+<td style="width: 165.6px;">Name of the medication</td>
+<td style="width: 165.6px;"><input name="name_med" type="text"  /> </td>
+</tr>
+<tr>
+<td style="width: 165.6px;">
+<p>Your food habits</p>
+</td>
+<td style="width: 165.6px;"><input name="food_hbt" type="radio" value="Veg" required/>Veg <input name="food_hbt" type="radio" value="nonveg" />NonVeg</td>
+</tr>
+</tbody>
+</table>
+<center><input name="sbmt" type="submit" value="Submit" /></center></form>
+
+</body>
+</html>
